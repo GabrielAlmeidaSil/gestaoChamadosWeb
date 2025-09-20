@@ -1,0 +1,217 @@
+/* CSS GLOBAL */
+
+/* INCLUINDO FONTES (GOOGLE FONTES) */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* FONTE */
+:root {
+    --mainFont: "Barlow", sans-serif;
+}
+
+/* CORES */
+:root {
+    --bgHeader: #004aad;
+    --colorButtons: #004aad;
+    --bgOptions: #b8e3ff;
+    --shadowText: #76c7d8; 
+    --bgHoverOptions: #a0d6ff;
+    --pendingStatus: #f95f44;
+    --analysisStatus: #d4c473;
+    --completedStatus: #026772;
+    --colorLink: #38b6ff;
+    --colorHeaderTable: #38b6ff;
+    --bgIa: #a2a2a2;
+    --bgFooter: #004aad;
+    --colorWhite: #fff;
+    --colorBlack: #000;
+}
+
+
+/* GERAIS */
+body {
+    font-family: var(--mainFont);
+}
+
+a {
+    text-decoration: none;
+    color: var(--colorLink) !important;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+
+/* TÍTULOS DAS SEÇÕES */
+.center-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.title {
+    border-bottom: 2px solid var(--colorBlack);
+    font-weight: bolder;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 0px var(--shadowText); 
+}
+
+
+/* HEADER (Cabeçalho) */
+header {
+    background: var(--bgHeader);
+}
+
+header a i {
+    font-size: 3em;
+    color: var(--colorWhite);
+}
+
+.infoUser p {
+    color: var(--colorWhite);
+}
+
+.infoUser, .bell {
+    flex-shrink: 0;
+}
+
+.home a i {
+    font-size: 3.5em;
+}
+
+
+
+/* MAIN (opções menu) */
+.options{
+    margin-top: 45px;
+}
+
+.optionMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: var(--bgOptions);
+    border: 5px solid var(--colorBlack);
+    border-radius: 20px;
+    margin: 12px;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.optionMenu:hover {
+    background: var(--bgHoverOptions);
+    transition: .3s ease;
+    transform: translateY(-3px);
+}
+
+.optionMenu h2 {
+    color: var(--colorBlack);
+    font-size: 2.8em;
+}
+
+.options i {
+    color: var(--colorBlack);
+    font-size: 2.6em;
+}
+
+.consultCall p {
+    font-size: 0.8em;
+    flex-wrap: nowrap;
+}
+
+
+/* RODAPÉ */
+footer {
+    background: var(--bgFooter);
+    color: var(--colorWhite);
+    padding: 15px 10px 2px 10px;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+footer > p > a {
+    color: red;
+}
+
+/* RODAPÉ NO FINAL DA PÁGINA*/
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+
+/* RESPONSIVIDADE DE ACORDO COM PX DA TELA*/
+@media (max-width: 1199px){
+    .optionMenu h2 {
+        font-size: 2em;
+    }
+
+    .options i {
+        font-size: 2.6em;
+    }
+}
+
+/* TABLETS */
+@media (max-width: 767px) {
+    .options {
+        margin-top: 0px;
+    }
+
+    
+
+    .icon-header i {
+        font-size: 2.8em;
+    }
+
+    .optionMenu h2 {
+        font-size: 2.2em;
+    }
+
+    .options i {
+        font-size: 2.2em;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 576px) {
+    header a i {
+        font-size: 2.2em; 
+    }
+
+    .nameUser {
+        display: none;
+    }
+
+    .home a i {
+        font-size: 2.6em;
+    }
+
+    .optionMenu h2 {
+        font-size: 1.6em;
+    }
+
+    .options i {
+        font-size: 2em;
+    }
+
+    .optionMenu {
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 1em;
+        text-align: center;
+        padding: 10px;
+    }
+}
