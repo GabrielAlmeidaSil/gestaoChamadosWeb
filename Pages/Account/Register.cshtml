@@ -1,0 +1,113 @@
+﻿@* @page
+@model GestaoChamadosWeb.Pages.Account.RegisterModel
+@{
+}
+ *@
+
+@page
+@model RegisterModel
+@{
+    Layout = "_LayoutLogin"; // mesmo layout que você usou no Login
+}
+
+<!-- FORMULÁRIO CRIAR CONTA -->
+
+<div class="login-wrapper">
+    <div class="container-form">
+
+        <!--Título Seção-->
+        <div class="center-title">
+            <h1 class="title mt-3 mb-5">Criar Conta</h1>
+        </div>
+
+        <form>
+            <!--Campo Nome-->
+            <div class="mb-3">
+                <label class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <!--Campo CPF-->
+            <div class="mb-3">
+                <label class="form-label">CPF</label>
+                <input type="number" class="form-control" placeholder="xxx.xxx.xxx" required>
+            </div>
+
+            <!--Campo Email-->
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="emaillinstitucional@empresa.com" required>
+            </div>
+
+            <!--Campo Telefone-->
+            <div class="mb-3">
+                <label class="form-label">Telefone</label>
+                <input type="number" class="form-control" placeholder="(xx) xxxxx.xxxx" required>
+            </div>
+
+            <!--Campo Data de Nascimento-->
+            <div class="mb-3">
+                <label class="form-label">Data de Nascimento</label>
+                <div class="options-date d-flex gap-3 w-100">
+                    <!--Campo dia-->
+                    <div class="day">
+                        <select class="form-select flex-fill">
+                            <option value="">1</option>
+                            @for (int i = 1; i <= 31; i++)
+                            {
+                                <option value="@i">@i</option>
+                            }
+                        </select>
+                    </div>
+
+                    <!--Campo Mês-->
+                    <div class="month">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Janeiro</option>
+                            <option value="1">Fevereiro</option>
+                            <option value="2">Março</option>
+                            <option value="3">Abril</option>
+                            <option value="4">Maio</option>
+                            <option value="5">Junho</option>
+                            <option value="6">Julho</option>
+                            <option value="7">Agosto</option>
+                            <option value="8">Setembro</option>
+                            <option value="9">Outubro</option>
+                            <option value="10">Novembro</option>
+                            <option value="11">Dezembro</option>
+                        </select>
+                    </div>
+
+                    <!--Campo ano-->
+                    <div class="year">
+                        <select class="form-select flex-fill">
+                            <option value="">2025</option>
+                            @for (int i = DateTime.Now.Year; i >= 1920; i--)
+                            {
+                                <option value="@i">@i</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!--Definir Senha-->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Definir Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" required>
+            </div>
+
+            <!--Confirmar Senha-->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Confirmar Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" required>
+            </div>
+
+            <!--Criar Conta-->
+            <div class="container-btn-create d-flex justify-content-between align-items-center mt-4">
+                <a href="#" class="btn-create-count">Voltar para Login</a>
+                <button type="submit" class="btn-create-count">Criar Conta</button>
+            </div>
+        </form>
+    </div>
+</div>

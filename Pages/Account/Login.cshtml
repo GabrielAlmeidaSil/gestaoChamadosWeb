@@ -1,8 +1,45 @@
 ﻿@page
-@model GestaoChamadosWeb.Pages.Account.LoginModel
+@model LoginModel
 @{
+    Layout = "_LayoutLogin"; 
 }
 
-<!-- SEÇÃO LOGIN-->
 
+<!--FORMULÁRIO LOGIN-->
+<div class="login-wrapper">
+    <div class="container-form"> 
 
+        <!--Título Seção-->
+        <div class="center-title">
+            <h1 class="title mt-3 mb-5">Login</h1>
+        </div>
+
+        <form>
+            <!--Campo Email-->
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="emaillinstitucional@empresa.com" required>
+            </div>
+
+            <!--Campo Senha-->
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" required>
+            </div>
+
+            <!--Campo Esqueceu a senha-->
+            <div class="mb-5 forgot-password">
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+
+            <!--Botão Entrar-->
+            <button type="submit" class="btn-form">Entrar</button>
+
+            <!--Criar Conta-->
+            <div class="d-flex justify-content-end align-items-center mt-4">
+                <p>Ainda não tem conta?</p>
+                <a href="#" class="btn-main ms-3">Criar conta</a>
+            </div>
+        </form>
+    </div>
+</div>

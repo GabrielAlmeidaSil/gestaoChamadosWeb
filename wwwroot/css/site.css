@@ -151,8 +151,83 @@ main {
 }
 
 
+
+/*SEÇÃO FORMULÁRIOS*/
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.container-form {
+    border: 2px solid gray;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0px 30px 16px 30px;
+}
+
+form label{
+    font-size: 1.6em;
+}
+
+.forgot-password a{
+    color: var(--colorBlack) !important;
+    text-decoration: underline;
+}
+
+.btn-form {
+    text-align: center;
+    border: 3px solid var(--colorBlack);
+    background: var(--colorButtons);
+    color: var(--colorWhite);
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border-radius: 50px;
+    font-size: 1.5em;
+}
+
+.btn-main {
+    text-align: center;
+    border: 3px solid var(--colorBlack);
+    background: var(--colorButtons);
+    color: var(--colorWhite) !important;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+/*CRIAR CONTA*/
+.options-date > div {
+    flex: 1; /*(campos ocupa 100% da tela (data nascimento)*/
+}
+
+.btn-create-count {
+    text-align: center;
+    border: 3px solid var(--colorBlack);
+    background: var(--colorButtons);
+    color: var(--colorWhite) !important;
+    padding: 8px 13px;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 1.5em;
+}
+
+.options-date select {
+    flex: 1; /* divide igualmente o espaço */
+    min-width: 0; /* evita quebra estranha em telas pequenas */
+}
+
+
 /* RESPONSIVIDADE DE ACORDO COM PX DA TELA*/
-@media (max-width: 1199px){
+@media (max-width: 1199px) {
+    /*Menu Principal*/
     .optionMenu h2 {
         font-size: 2em;
     }
@@ -164,11 +239,11 @@ main {
 
 /* TABLETS */
 @media (max-width: 767px) {
+
+    /*Menu Principal*/
     .options {
         margin-top: 0px;
     }
-
-    
 
     .icon-header i {
         font-size: 2.8em;
@@ -185,6 +260,8 @@ main {
 
 /* CELULARES */
 @media (max-width: 576px) {
+
+    /*Menu Principal*/
     header a i {
         font-size: 2.2em; 
     }
@@ -213,5 +290,22 @@ main {
         font-size: 1em;
         text-align: center;
         padding: 10px;
+    }
+
+    /*Formulario (login)*/
+    .container-form {
+        border: none;
+    }
+}
+
+/*BOTOES CRIAR CONTA*/
+@media(max-width: 460px){
+    .container-btn-create{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-btn-create a{
+        margin-bottom: 15px;
     }
 }
