@@ -1,0 +1,87 @@
+﻿@* @page
+@model GestaoChamadosWeb.Pages.Account.ProfileModel
+@{
+} *@
+
+
+@page
+@model RegisterModel
+@{
+    Layout = "_LayoutLogin"; // mesmo layout que você usou no Login
+}
+
+
+<!--DETALHES DA CONTA-->
+
+<!-- CONTAINER GERAL (100vh) -->
+<div class="d-flex flex-column min-vh-100">
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="d-flex align-items-center position-relative py-4 px-3">
+            <!-- Ícone Perfil -->
+            <div class="infoUser d-flex align-items-center">
+                <a asp-page="/Account/Profile" class="icon-header d-flex gap-2 align-items-center">
+                    <i class="bi bi-person-circle"></i>
+                    <p class="nameUser fs-5 m-0">Gabriel Almeida</p>
+                </a>
+            </div>
+
+            <!-- Ícone Casa central -->
+            <div class="home position-absolute top-50 start-50 translate-middle">
+                <a class="icon-header">
+                    <i class="bi bi-house"></i>
+                </a>
+            </div>
+
+            <!-- Ícone Sino -->
+            <div class="bell ms-auto">
+                <a href="" class="icon-header">
+                    <i class="bi bi-bell"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="flex-fill container my-5">
+        <!-- Título -->
+        <div class="center-title">
+            <h1 class="title mt-3 mb-5">Informações da Conta</h1>
+        </div>
+
+        <!-- Linha com foto e informações -->
+        <div class="row text-center text-md-start align-items-center g-4">
+            <!-- Foto de Perfil -->
+            <div class="col-12 col-md-4">
+                <a href="#" class="icon-edit-profile d-inline-block">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+
+            <!-- Informações Esquerda -->
+            <div class="col-12 col-md-4 list-info-count">
+                <ul class="list-unstyled">
+                    <li><strong>Nome:</strong> Gabriel Almeida</li>
+                    <li><strong>Email:</strong> exemplo@email.com</li>
+                    <li><strong>Telefone:</strong> (00) 00000-0000</li>
+                    <li><strong>Conta criada em:</strong> 27/09/2025</li>
+                </ul>
+            </div>
+
+            <!-- Informações Direita -->
+            <div class="col-12 col-md-4 list-info-count">
+                <ul class="list-unstyled">
+                    <li><strong>Tipo de Conta:</strong> Administrador</li>
+                    <li><strong>Status da Conta:</strong> Ativa</li>
+                    <li><strong>Último Acesso:</strong> Hoje</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- RODAPÉ FIXO -->
+    <footer>
+        <p class="text-center">Dúvidas? Confira a nossa seção de <a href="">Perguntas Frequentes (FAQ)</a> para respostas rápidas!</p>
+    </footer>
+</div>
