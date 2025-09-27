@@ -28,7 +28,7 @@
 
 
 /* GERAIS */
-body {
+/*body {
     font-family: var(--mainFont);
 }
 
@@ -44,7 +44,36 @@ button {
 
 ul{
     list-style: none;
+}*/
+
+html, body {
+    height: 100%;
+    font-family: var(--mainFont);
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--colorLink) !important;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+ul {
+    list-style: none;
+}
+
 
 
 /* TÍTULOS DAS SEÇÕES */
@@ -231,19 +260,6 @@ form label{
 
 
 /*INFORMAÇÕES DA CONTA */
-/*.list-info-count ul li{
-    font-size: 1.2em;
-    margin: 0.7em;
-}
-
-.icon-edit-profile{
-    font-size: 14em;
-}
-
-.list-info-count-left{
-    border-right: 3px solid var(--colorBlack);
-}*/
-
 .list-info-count ul li {
     font-size: 1.1em;
     margin-bottom: 8px;

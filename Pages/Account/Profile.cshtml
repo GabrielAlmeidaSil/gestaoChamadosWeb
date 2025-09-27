@@ -29,7 +29,7 @@
 
             <!-- Ícone Casa central -->
             <div class="home position-absolute top-50 start-50 translate-middle">
-                <a class="icon-header">
+                <a asp-page="/Index" class="icon-header">
                     <i class="bi bi-house"></i>
                 </a>
             </div>
@@ -44,7 +44,7 @@
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
-    <main class="flex-fill container my-5">
+    <main class="flex-fill container mt-2 mb-5">
         <!-- Título -->
         <div class="center-title">
             <h1 class="title mt-3 mb-5">Informações da Conta</h1>
@@ -82,6 +82,6 @@
 
     <!-- RODAPÉ FIXO -->
     <footer>
-        <p class="text-center">Dúvidas? Confira a nossa seção de <a href="">Perguntas Frequentes (FAQ)</a> para respostas rápidas!</p>
+        <p class="text-center">Dúvidas? Confira a nossa seção de <a asp-page="/FAQ">Perguntas Frequentes (FAQ)</a> para respostas rápidas!</p>
     </footer>
 </div>
