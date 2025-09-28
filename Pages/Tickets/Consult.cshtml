@@ -1,0 +1,38 @@
+﻿@page
+@model GestaoChamadosWeb.Pages.Tickets.ConsultModel
+@{
+}
+
+<!--CONSULTAR CHAMADOS-->
+
+<!--TÍTULO-->
+<div class="center-title">
+    <h1 class="title mt-3 mb-5 text-center">Consultar Chamados</h1>
+</div>
+
+<p class="text-center fs-4">Informe o número do chamado ou o período do mesmo nos campos abaixo:</p>
+
+<!--Campos para Preencher-->
+
+<div class="d-flex flex-column justify-content-center align-items-center">
+    
+    <!--Campo Número do Chamado-->
+    <div class="d-flex flex-column my-4">
+        <label class="fw-bold fs-5">Número do Chamado</label>
+        <input type="number" class="text-center"/>
+    </div>
+
+    <!--Campo Período do Chamado-->
+    <div class="d-flex flex-column my-4">
+        <label class="fw-bold fs-5 text-center">Período</label>
+
+        <div class="d-flex d-inline-flex">
+            <input type="date" id="dataInicio" name="dataInicio" class="form-control w-auto" />
+            <span class="mx-2">até</span>
+            <input type="date" id="dataFim" name="dataFim" class="form-control w-auto" />
+        </div>
+    </div>
+
+    <!--Botão Consultar Chamado-->
+    <button type="submit" class="btn-main mt-3">Consultar Chamado</button>
+</div>

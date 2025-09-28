@@ -271,6 +271,21 @@ form label{
 }
 
 
+/*ABRI CHAMADO*/
+.textarea-create-ticket{
+    padding: 0.7em;
+    height: 140px;
+    resize: none;
+}
+
+.ia-answer{
+    height: 145px;
+    padding: 0.7em;
+    background: gray;
+    border: 1px solid var(--colorBlack)
+}
+
+
 /* RESPONSIVIDADE DE ACORDO COM PX DA TELA*/
 @media (max-width: 1199px) {
     /*Menu Principal*/
@@ -346,7 +361,12 @@ form label{
 
 /*BOTOES CRIAR CONTA*/
 @media(max-width: 460px){
-    .container-btn-create{
+     /*Bordar titulo sumir*/
+    .title{
+        border: none;
+    }
+
+    .container-btn-create {
         display: flex;
         flex-direction: column;
     }

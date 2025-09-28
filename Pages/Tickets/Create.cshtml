@@ -1,0 +1,74 @@
+﻿@page
+@model GestaoChamadosWeb.Pages.Tickets.CreateModel
+@{
+}
+
+<!--ABRIR CHAMADO-->
+
+<!--TÍTULO-->
+<div class="center-title">
+    <h1 class="title mt-3 mb-5 text-center">Abrir Chamado</h1>
+</div>
+
+<div class="container">
+    <form>
+        <div class="row">
+
+            <!--Campo Lado Esquerdo-->
+            <div class="col-12 col-md-6">
+                <!--Campo Nome-->
+                <div class="mb-3">
+                    <label class="form-label">Nome</label>
+                    <input type="text" class="form-control" placeholder="Digite o seu Nome" required>
+                </div>
+
+                <!--Campo Email-->
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="emaillinstitucional@empresa.com" required>
+                </div>
+
+                <!--Campo Data e Hora do Ocorrido-->
+                <div class="mb-3">
+                    <label class="form-label">Data e Hora do ocorrido</label>
+                    <input  type="datetime-local" class="form-control" />
+                </div> 
+
+                <!--Campo Tipo de Problema-->
+                <div class="mb-3">
+                    <label class="form-label">Tipo de Problema</label>
+                    <select class="form-select">
+                        <option value="">Select</option>
+                        <option value="Sistema">System Issue</option>
+                        <option value="Hardware">Hardware</option>
+                        <option value="Software">Software</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--Campo Lado Direito-->
+            <div class="col-12 col-md-6">
+
+                <!--Campo Descrição do problema-->
+                <div class="mb-3 d-flex flex-column">
+                    <label class="form-label">Descrição do Problema</label>
+                    <textarea class="textarea-create-ticket" placeholder="Descreva o problema com detalhes"></textarea>
+                </div>
+
+                <!--Campo Sugestão de Solução (IA)-->
+                <div class="mb-3">
+                    <label>Sugestão de Solução (IA)</label>
+                    <div class="ia-answer">
+
+                    </div>
+                </div>
+
+                <!--Botão Abrir chamado-->
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn-main my-3">Abrir Chamado</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
