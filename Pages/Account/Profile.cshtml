@@ -1,47 +1,16 @@
-﻿@* @page
+﻿@page
 @model GestaoChamadosWeb.Pages.Account.ProfileModel
 @{
-} *@
+} 
 
 
-@page
-@model RegisterModel
-@{
-    Layout = "_LayoutLogin"; // mesmo layout que você usou no Login
-}
+
 
 
 <!--DETALHES DA CONTA-->
 
 <!-- CONTAINER GERAL (100vh) -->
-<div class="d-flex flex-column min-vh-100">
-
-    <!-- CABEÇALHO -->
-    <header>
-        <div class="d-flex align-items-center position-relative py-4 px-3">
-            <!-- Ícone Perfil -->
-            <div class="infoUser d-flex align-items-center">
-                <a asp-page="/Account/Profile" class="icon-header d-flex gap-2 align-items-center">
-                    <i class="bi bi-person-circle"></i>
-                    <p class="nameUser fs-5 m-0">Gabriel Almeida</p>
-                </a>
-            </div>
-
-            <!-- Ícone Casa central -->
-            <div class="home position-absolute top-50 start-50 translate-middle">
-                <a asp-page="/Index" class="icon-header">
-                    <i class="bi bi-house"></i>
-                </a>
-            </div>
-
-            <!-- Ícone Sino -->
-            <div class="bell ms-auto">
-                <a href="" class="icon-header">
-                    <i class="bi bi-bell"></i>
-                </a>
-            </div>
-        </div>
-    </header>
+<div class="d-flex flex-column">
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="flex-fill container mt-2 mb-5">
@@ -79,9 +48,4 @@
             </div>
         </div>
     </main>
-
-    <!-- RODAPÉ FIXO -->
-    <footer>
-        <p class="text-center">Dúvidas? Confira a nossa seção de <a asp-page="/FAQ">Perguntas Frequentes (FAQ)</a> para respostas rápidas!</p>
-    </footer>
 </div>

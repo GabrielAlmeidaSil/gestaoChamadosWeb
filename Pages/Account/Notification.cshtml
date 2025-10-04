@@ -1,0 +1,55 @@
+﻿@page
+@model GestaoChamadosWeb.Pages.Account.NotificationModel
+@{
+}
+
+<!--PÁGINA DE NOTIFICAÇÕES-->
+
+<!--TÍTULO DA PÁGINA-->
+<div class="center-title">
+    <h1 class="title mt-3 mb-5 text-center">Notificações</h1>
+</div>
+
+<!--Seção de Notificações-->
+
+<div class="container container-notification p-3 p-sm-4 mb-3">
+    
+    <!--Seção Branca-->
+    <div class="section-white bg-white">
+        <!--Chamado Pendente-->
+        <div class="card-notification d-flex align-items-center">
+            <i class="bi bi-exclamation-triangle p-4"></i>
+
+            <!--Dados da Notificação-->
+            <div class="notification-data d-flex flex-column  p-3">
+                <h2 class="fw-bold text-start">Chamado N. 12345 pendente de retorno</h2>
+                <p>Mensagem do Analista: Prezado, não compreendi a completude do problema. Poderia esclarecer melhor?</p>
+            </div>
+        </div>
+
+        <!--Chamado Resolvido-->
+        <div class="card-notification d-flex align-items-center">
+            <i class="bi bi-check2 p-4"></i>
+
+            <!--Dados da Notificação-->
+            <div class="notification-data d-flex flex-column  p-3">
+                <h2 class="fw-bold text-start">Chamado N. 12346 resolvido</h2>
+                <p>
+                    Mensagem do Analista: Caro usuário, atendendo ao seu chamado, a intercorrência de navegação foi sanada. Peço realizar o teste.
+                    Estamos à disposição!
+                </p>
+            </div>
+        </div>
+
+        <!--Chamado Atualizado-->
+        <div class="card-notification-last d-flex align-items-center">
+            <i class="bi bi-exclamation-lg p-4"></i>
+
+            <!--Dados da Notificação-->
+            <div id="card-notification-last" class="d-flex flex-column p-3">
+                <h2 class="fw-bold text-start">Aviso de Atualização</h2>
+                <p>Mensagem do Analista: Prezado(a), na data de 04/05 haverá atualização no sistema, podendo haver  leve lentidão no período.</p>
+            </div>
+        </div>
+    </div>
+</div>
